@@ -20,13 +20,11 @@ if (!isset($_SESSION['number']))
         $_SESSION['number'] = $number;
     }
         
-    //echo $_SESSION['number'];
     unset($_SESSION['guesses']);
     $_SESSION['guesses'] = array();
 }
 else
 {
-    //echo $_SESSION['number'];
     if (isset($_POST['guess']))
     {
         $guess = intval($_POST['guess']);
@@ -55,7 +53,6 @@ else
             }
             else {
                 array_push($_SESSION['scoreboard'], count($_SESSION['guesses']));
-                //var_dump($_SESSION['scoreboard']);
             }
             
         }
